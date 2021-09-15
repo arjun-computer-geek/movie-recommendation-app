@@ -50,10 +50,23 @@ const App = () => {
         {
           movieTye === 'hollywood' ?
             <div>{
-                moviesCollection[gener].hollywood.movies.length
-                // moviesCollection[gener].hollywood.movies[0]
-              }</div> :
-            <div>{moviesCollection[gener].bollywood.movies[0]}</div>
+                // console.log(Array.isArray(moviesCollection[gener].hollywood.movies))
+                moviesCollection[gener].hollywood.movies[0]
+
+              }
+              <span> 
+                &nbsp; {moviesCollection[gener].hollywood.ratings[0]}
+              </span>
+            </div> :
+            <div>
+              {
+                moviesCollection[gener].bollywood.movies[0]
+              }
+              <span> 
+                &nbsp; {moviesCollection[gener].bollywood.ratings[0]}
+              </span>
+            
+            </div>
         }
 
       </div>
