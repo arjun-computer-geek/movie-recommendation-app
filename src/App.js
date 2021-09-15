@@ -19,10 +19,6 @@ const App = () => {
     }
   }
 
-  // A prototype for capitalize the first letter of the Stirng
-  String.prototype.capitalize = function () {
-    return this.charAt(0).toUpperCase() + this.slice(1);
-  }
 
   return (
     <div className="container">
@@ -39,7 +35,7 @@ const App = () => {
               key={index}
               onClick={() => setGener(item)}
             >
-              {item.capitalize()}
+              {item}
             </button>
           );
         })
