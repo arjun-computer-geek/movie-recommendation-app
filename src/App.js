@@ -49,24 +49,42 @@ const App = () => {
 
         {
           movieTye === 'hollywood' ?
-            <div>{
-                // console.log(Array.isArray(moviesCollection[gener].hollywood.movies))
-                moviesCollection[gener].hollywood.movies[0]
+            <ul>{
+              // console.log(Array.isArray(moviesCollection[gener].hollywood.movies))
+              moviesCollection[gener].hollywood.movies.map((item, index) => {
+                return (
+                  <li
+                    key={index}
+                  >
+                    {item}
+                    <span>
+                      &nbsp; {moviesCollection[gener].hollywood.ratings[index]}
+                    </span>
+                  </li>
+                )
+              })
 
-              }
-              <span> 
-                &nbsp; {moviesCollection[gener].hollywood.ratings[0]}
-              </span>
-            </div> :
-            <div>
-              {
-                moviesCollection[gener].bollywood.movies[0]
-              }
-              <span> 
-                &nbsp; {moviesCollection[gener].bollywood.ratings[0]}
-              </span>
-            
-            </div>
+            }
+
+            </ul> :
+            <ul>{
+              // console.log(Array.isArray(moviesCollection[gener].hollywood.movies))
+              moviesCollection[gener].bollywood.movies.map((item, index) => {
+                return (
+                  <li
+                    key={index}
+                  >
+                    {item}
+                    <span>
+                      &nbsp; {moviesCollection[gener].bollywood.ratings[index]}
+                    </span>
+                  </li>
+                )
+              })
+
+            }
+
+            </ul>
         }
 
       </div>
