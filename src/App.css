@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(0, 0, 0);
+}
+.container{
+    box-shadow: rgb(255, 255, 255) 0px 8px 24px;
+    border-radius: 15px ;
+    color: white;
+    width: 75%;
+    min-height: 70vh;
+    margin: auto;
+    margin-top: 5vh;
+    padding: 30px;
+    
+}
+.sub-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.toggleBtn{
+    box-shadow: rgba(255, 255, 255, 0.849) 0px 8px 24px;
+    float: right;
+    padding: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+li{
+    list-style-type: none;
+    background:white;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+}
+.left, .right{
+    height: auto;
+    width: 100%;
+    text-align: justify;
+    padding: 20px;
+    font-size: 18pt;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+}
+.customButton{
+    background: none;
+    border: 2px solid rgb(134, 248, 182);
+    border-radius: 5px;
+    height: 50px;
+    margin: 10px;
+    color: white;
+    font-size: 12pt;
+    cursor: pointer;
+}
+.active{
+    background-color: rgb(134, 248, 182);
+    color: black;
+}
+.right ul li span{
+    /* background: red; */
+    float: right;
+}
