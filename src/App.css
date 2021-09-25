@@ -78,12 +78,13 @@ li{
         width: 90%;
         min-height: 90vh;
         margin-top: 5vh;
-        padding: 15px;
+        padding: 10px;
+        padding-top: 20px;
         
     }
     li{
         padding: 5px;
-        margin: 10px;
+        margin: 5px;
         width: 100%;
     }
     .sub-container{
@@ -100,13 +101,14 @@ li{
     .left{
         display: flex;
         flex-direction: column;
-        width: 40%;
+        width: 30%;
+        padding:5px
     }
     .customButton{
         height: 50px;
         margin: 5px;
         font-size: 9pt;
-        font-weight: bold;
+        font-weight: bolder;
     }
     .active{
         background-color: rgb(134, 248, 182);
