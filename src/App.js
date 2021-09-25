@@ -33,7 +33,7 @@ const App = () => {
               return (
                 <button
                   key={index}
-                  onClick={() => {setGener(item); setClickedId(index)}}
+                  onClick={() => { setGener(item); setClickedId(index) }}
                   className={index === clickedId ? "customButton active" : "customButton"}
                 >
                   {item}

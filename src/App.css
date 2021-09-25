@@ -25,11 +25,14 @@ body{
 .toggleBtn{
     box-shadow: rgba(255, 255, 255, 0.849) 0px 8px 24px;
     float: right;
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
     background: none;
     border: none;
     color: white;
+    border-radius: 5px;
+    width: 100px;
+
 }
 li{
     list-style-type: none;
@@ -64,6 +67,42 @@ li{
     color: black;
 }
 .right ul li span{
-    /* background: red; */
     float: right;
+}
+
+/* responsive designing  */
+
+@media only screen and (max-width: 600px) {
+   
+    .container{
+        width: 90%;
+        min-height: 90vh;
+        margin-top: 5vh;
+        padding: 15px;
+        
+    }
+    li{
+        padding: 5px;
+        margin: 10px;
+        width: 100%;
+    }
+    .sub-container{
+        width: 100%;
+        padding-top: 10px;
+    }
+    .right{
+        text-align: left;
+        padding: 5px;
+        font-size: 14pt;
+        width: 400px;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+    }
+    .active{
+        background-color: rgb(134, 248, 182);
+        color: black;
+    }
 }
