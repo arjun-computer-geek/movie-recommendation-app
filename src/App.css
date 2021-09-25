@@ -93,13 +93,21 @@ li{
     .right{
         text-align: left;
         padding: 5px;
-        font-size: 14pt;
-        width: 400px;
+        font-size: 9pt;
+        font-weight: bolder;
+        width: 70%;
     }
     .left{
         display: flex;
         flex-direction: column;
-        width: 35%;
+        width: 40%;
+    }
+    .customButton{
+        height: 40px;
+        margin: 10px;
+        color: white;
+        font-size: 10pt;
+        cursor: pointer;
     }
     .active{
         background-color: rgb(134, 248, 182);
