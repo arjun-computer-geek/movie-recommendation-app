@@ -94,8 +94,8 @@ li{
         text-align: left;
         padding: 5px;
         font-size: 9pt;
-        font-weight: bolder;
-        width: 70%;
+        font-weight: bold;
+        width: 80%;
     }
     .left{
         display: flex;
@@ -103,14 +103,17 @@ li{
         width: 40%;
     }
     .customButton{
-        height: 40px;
-        margin: 10px;
-        color: white;
-        font-size: 10pt;
-        cursor: pointer;
+        height: 50px;
+        margin: 5px;
+        font-size: 9pt;
+        font-weight: bold;
     }
     .active{
         background-color: rgb(134, 248, 182);
         color: black;
+    }
+    .right ul li span{
+        float: right;
+        background: red;
     }
 }
