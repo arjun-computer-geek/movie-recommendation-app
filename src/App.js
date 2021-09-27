@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import './App.css'
 import moviesCollection from './moviesData';
+import rating from './img/rating.png'
 
-const geners = ['action', 'comedy', 'drama', 'horror', 'romance', 'thriller'];
+const genres = ['action', 'comedy', 'drama', 'horror', 'romance', 'thriller'];
 
 
 const App = () => {
   const [movieTye, setMovieType] = useState('hollywood');
-  const [gener, setGener] = useState('action')
+  const [genre, setGenre] = useState('action')
   const [clickedId, setClickedId] = useState(-1);
   // Movie type toggeler function
   const toggleMovieType = () => {
@@ -29,11 +30,11 @@ const App = () => {
       <div className="sub-container">
         <div className="left">
           {
-            geners.map((item, index) => {
+            genres.map((item, index) => {
               return (
                 <button
                   key={index}
-                  onClick={() => { setGener(item); setClickedId(index) }}
+                  onClick={() => { setGenre(item); setClickedId(index) }}
                   className={index === clickedId ? "customButton active" : "customButton"}
                 >
                   {item}
@@ -48,16 +49,19 @@ const App = () => {
           {
             movieTye === 'hollywood' ?
               <ul>{
-                // console.log(Array.isArray(moviesCollection[gener].hollywood.movies))
-                moviesCollection[gener].hollywood.movies.map((item, index) => {
+                // console.log(Array.isArray(moviesCollection[genre].hollywood.movies))
+                moviesCollection[genre].hollywood.movies.map((item, index) => {
                   return (
                     <li
                       key={index}
                     >
                       {item}
+                      
                       <span>
-                        &nbsp; {moviesCollection[gener].hollywood.ratings[index]}
+                        <img src={rating} alt={`rating`}/>
+                        &nbsp; {moviesCollection[genre].hollywood.ratings[index]}
                       </span>
+                      <p>{moviesCollection[genre].hollywood.description[index]}</p>
                     </li>
                   )
                 })
@@ -66,16 +70,18 @@ const App = () => {
 
               </ul> :
               <ul>{
-                // console.log(Array.isArray(moviesCollection[gener].hollywood.movies))
-                moviesCollection[gener].bollywood.movies.map((item, index) => {
+                // console.log(Array.isArray(moviesCollection[genre].hollywood.movies))
+                moviesCollection[genre].bollywood.movies.map((item, index) => {
                   return (
                     <li
                       key={index}
                     >
                       {item}
                       <span>
-                        &nbsp; {moviesCollection[gener].bollywood.ratings[index]}
+                        <img src={rating} alt={`rating`}/>
+                        &nbsp; {moviesCollection[genre].bollywood.ratings[index]}
                       </span>
+                      <p>{moviesCollection[genre].bollywood.description[index]}</p>
                     </li>
                   )
                 })

@@ -66,9 +66,28 @@ li{
     background-color: rgb(134, 248, 182);
     color: black;
 }
-.right ul li span{
-    float: right;
+.right ul li{
+    border-radius: 5px;
 }
+.right ul li img{
+    display: inline;
+    /* float: right; */
+    height: 10%;
+    width: 15%;
+}
+
+.right ul li span{
+    margin: 10px 0;
+    margin-left: 20px;
+    /* float: right; */
+    color: rgb(0, 0, 0);
+}
+.right ul li p{
+    color: rgb(92, 92, 92);
+    font-size: 14pt;
+    letter-spacing: 0.1rem;
+}
+
 
 /* responsive designing  */
 
@@ -117,5 +136,9 @@ li{
     .right ul li span{
         float: right;
         color: rgb(9, 221, 83);
+        margin-left: 0px;
+    }
+    .right ul li p{
+        font-size: 12pt;
     }
 }
